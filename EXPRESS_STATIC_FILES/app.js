@@ -10,3 +10,10 @@ app.get('/',function(req,res){
 app.listen(3000, function () {
   console.log('Example app listening on port 3000!');
 });
+
+app.get('/about',function(req,res){
+ res.sendFile(path.join(__dirname+'/about.html'));
+});
+app.get('/sitemap',function(req,res){
+ res.sendFile(path.join(__dirname+'/sitemap.html'));
+});
